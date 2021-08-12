@@ -1,5 +1,9 @@
 const router = require('express').Router()
 
+// router.get("/something", async (req,res, next) => {
+    
+// })
+
 router.use('*', (req, res) => {
     res.json({ api: "up"})
 })
