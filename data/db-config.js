@@ -1,6 +1,10 @@
 const knex = require('knex');
 
-const config = require('../knexfile.js');
+const configurations = require('../knexfile.js'); 
 const environment = process.env.NODE_ENV
 
-module.exports = knex(config.development);
+module.exports = knex(configurations[environment]);
+
+// What's on my .env file
+// PORT=5000
+// NODE_ENV=development
